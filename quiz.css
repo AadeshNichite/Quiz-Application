@@ -1,12 +1,23 @@
 :root{
     --color-1:6477C6;
-   
-    --color-2:4B4B71;
-    
+    --color-2:4B4B71; 
     --color-3:white;
+}
+*
+{
+    margin: 0;
+    padding: 0;
 
 }
-.MainPage{
+.header
+{
+    height: 100vh;
+}  
+.navbar-style
+{
+    box-shadow: 0 5px 10px #efefef;
+}
+ /* .MainPage{
     background-color: var(--color-1);
     height: 100%;
     width: 100%;
@@ -26,4 +37,9 @@
     cursor: pointer;
     color: var(--color-3);
     font-family: sans-serif;
+}  */
+
+.panel-body
+{
+    background-color: var(--color-1);
 }
