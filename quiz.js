@@ -20,10 +20,16 @@ $(function(){
     localStorage.setItem("jsonn",JSON.stringify(questions));
     // // console.log('hello');
      let set= JSON.parse(localStorage.getItem("jsonn"));
-     console.log(set);
-    //  const keys1 = Object.keys(set);
-    // let q = set[keys1[1]];
-    // console.log(q["question"]);
+     //console.log(set);
+
+    const keys1 = Object.keys(set);
+    let q = set[keys1[1]];
+     console.log(q["question"]);
+     var k=q["question"]
+     console.log(q["options"]);
+
+     
+
     // console.log(localStorage.getItem("jsonn"));
    });
     // let randIndex = Math.floor(Math.random()*(keys1.length));
