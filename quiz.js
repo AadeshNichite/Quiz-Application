@@ -24,6 +24,7 @@ let count=0;
      //let answ=value["answer"];
      sessionStorage.setItem("que",keys[randIndex].question);
      sessionStorage.setItem("ans",keys[randIndex].answer);
+     sessionStorage.setItem("que",count);
     localStorage.setItem("question",JSON.stringify(value));
     
     $("#queNo").text(count);
@@ -35,6 +36,7 @@ let count=0;
     $("#result").text(mark);
    });
 }
+
 count++;
 }
 function process()
@@ -120,6 +122,7 @@ function process3()
     {
         console.log("Right answer");
         mark=mark+1;
+        var ans = sessionStorage.getItem("mark");
         
         // localStorage.setItem("mark",mark);
     
@@ -133,12 +136,13 @@ function process3()
     
 }
 
-
+let ans = sessionStorage.getItem("ans");
+         $("#result").text(ans);
 
     //     console.log(mark);
-    // 
-    function findResult(){
-        //let mark= JSON.parse(localStorage.getItem("mark"));
-        
-       console.log(mark);
-      }
+     
+     function findResult(){
+         //let mark= JSON.parse(localStorage.getItem("mark"));
+         
+        console.log(ans);
+       }
