@@ -3,17 +3,15 @@ $(function(){
   })
 
   let mark=0;  
-//  function findResult(){
-//     //let mark= JSON.parse(localStorage.getItem("mark"));
-//     $("#result").text(mark);
-//     console.log(mark);
-//  }
-  
+  $("#result").text(mark);
+let count=0;
+
   function getJSON(){
-     let count=0;
+    
      if(count<10)
      {
-    $.getJSON("ques-db.json",function(json){
+    
+        $.getJSON("ques-db.json",function(json){
     
    const keys = Object.values(json);
     let randIndex = Math.floor(Math.round(Math.random()*7));
@@ -27,12 +25,14 @@ $(function(){
      sessionStorage.setItem("que",keys[randIndex].question);
      sessionStorage.setItem("ans",keys[randIndex].answer);
     localStorage.setItem("question",JSON.stringify(value));
+    
+    $("#queNo").text(count);
     $("#que").text(keys[randIndex].question);
     $("#value1").text(value["options"][0]);
     $("#value2").text(value["options"][1]);
     $("#value3").text(value["options"][2]);
     $("#value4").text(value["options"][3]);
-
+    $("#result").text(mark);
    });
 }
 count++;
@@ -49,7 +49,7 @@ function process()
     {
         console.log("Right answer");
         
-        mark++;
+        mark=mark+1;
         // localStorage.setItem("mark",mark);
         // console.log1(mark);
         console.log(mark);
@@ -73,7 +73,7 @@ function process1()
     if(ans==selectedValue)
     {
         console.log("Right answer")
-        mark++;
+        mark=mark+1;
        
         // localStorage.setItem("mark",mark);
     
@@ -96,7 +96,7 @@ function process2()
     if(ans==selectedValue)
     {
         console.log("Right answer");
-        mark++;
+        mark=mark+1;
        
     //    localStorage.setItem("mark",mark);
     
@@ -137,4 +137,8 @@ function process3()
 
     //     console.log(mark);
     // 
-
+    function findResult(){
+        //let mark= JSON.parse(localStorage.getItem("mark"));
+        
+       console.log(mark);
+      }
