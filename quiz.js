@@ -1,96 +1,138 @@
 $(function(){
-
     getJSON();
-  
   })
-  function getJSON(){
-   // console.log("Starting..");
-   $.getJSON("ques-db.json",function(json){
-    questions = json;
-     //console.log(questions);
-     //console.log(Object);
-    const keys = Object.keys(questions);
-       // console.log(keys.length);
-    //    // [0 -> 1] * 1
-    let randIndex = Math.round(Math.random()*(keys.length));
-    console.log(randIndex);
-    localStorage.setItem("jsonn",JSON.stringify(questions));
-    // // console.log('hello');
-     let set= JSON.parse(localStorage.getItem("jsonn"));
-     //console.log(set);
-    const keys1 = Object.keys(set);
-    let q = set[keys1[randIndex]];
-     console.log(q["question"]);
 
-     
-
-     
-     var key=q["question"];
-     var answer=q["answer"];
-     sessionStorage.setItem("que","key");
-     sessionStorage.setItem("ans","answer");
-    // console.log(answer);
-    //  var ans=q["options"][0];
-    //  console.log(ans);
-    //console.log(key);
-    // console.log(q[options[0]]);
-    localStorage.setItem("question",JSON.stringify(q));
-      document.getElementById("que").innerHTML=key;
-      document.getElementById("value1").innerHTML=q["options"][0];
-      document.getElementById("value2").innerHTML=q["options"][1];
-      document.getElementById("value3").innerHTML=q["options"][2];
-      document.getElementById("value4").innerHTML=q["options"][3];
-
-    // console.log(localStorage.getItem("jsonn"));
-   });
-    // let randIndex = Math.floor(Math.random()*(keys1.length));
- //    console.log('dfddf');
+  let mark=0;  
+ function findResult(){
+    //let mark= JSON.parse(localStorage.getItem("mark"));
+    $("#result").text(mark);
+    console.log(mark);
  }
+  
+  function getJSON(){
+     
+
+    $.getJSON("ques-db.json",function(json){
+    
+   const keys = Object.values(json);
+    let randIndex = Math.floor(Math.round(Math.random()*(10)));
+
+    let value = keys[randIndex];
+       // console.log(q);
+    //  let key=value["question"];
+       // console.log(keys[randIndex].question);
+     //console.log(key);
+     //let answ=value["answer"];
+     sessionStorage.setItem("que",keys[randIndex].question);
+     sessionStorage.setItem("ans",keys[randIndex].answer);
+    localStorage.setItem("question",JSON.stringify(value));
+    $("#que").text(keys[randIndex].question);
+    $("#value1").text(value["options"][0]);
+    $("#value2").text(value["options"][1]);
+    $("#value3").text(value["options"][2]);
+    $("#value4").text(value["options"][3]);
+
+   });
+
+}
 function process()
 {
     var selectedValue=document.getElementById("value1").value;
     console.log(selectedValue);
-    // let set= JSON.parse(localStorage.getItem("jsonn"));
-    // console.log(set);
+    
     var que = sessionStorage.getItem("que");
     var ans = sessionStorage.getItem("ans");
-    console.log(question);
-    console.log(answer);
-    // if(selectedValue==answer)
-    // {
-    //     alert("yess");
-    // }
+
+    if(ans==selectedValue)
+    {
+        console.log("Right answer");
+        
+        mark++;
+        // localStorage.setItem("mark",mark);
+        // console.log1(mark);
+        console.log(mark);
+        
+    }
+    else
+    {
+        console.log("wrong answer");
+        
+    }
+    getJSON();
+    
 
 }
 function process1()
 {
     var selectedValue=document.getElementById("value2").value;
     console.log(selectedValue);
-    // if(selectedValue==answer)
-    // {
-    //     alert("yess");
-    // }
+    var que = sessionStorage.getItem("que");
+    var ans = sessionStorage.getItem("ans");
+    if(ans==selectedValue)
+    {
+        console.log("Right answer")
+        mark++;
+       
+        // localStorage.setItem("mark",mark);
+    
+    }
+    else
+    {
+        console.log("wrong answer");
+        
+    }
+    getJSON();
+    
 }
 function process2()
 {
     var selectedValue=document.getElementById("value3").value;
     console.log(selectedValue);
-    // if(selectedValue==answer)
-    // {
-    //     alert("yess");
-    // }
+    var que = sessionStorage.getItem("que");
+    var ans = sessionStorage.getItem("ans");
+
+    if(ans==selectedValue)
+    {
+        console.log("Right answer");
+        mark++;
+       
+    //    localStorage.setItem("mark",mark);
+    
+    }
+    else
+    {
+        console.log("wrong answer");
+       
+    }
+    getJSON();
+    
 }
 function process3()
 {
     var selectedValue=document.getElementById("value4").value;
     console.log(selectedValue);
-    // if(selectedValue==answer)
-    // {
-    //     alert("yess");
-    // }
+    var que = sessionStorage.getItem("que");
+    var ans = sessionStorage.getItem("ans");
+   
+    if(ans==selectedValue)
+    {
+        console.log("Right answer");
+        mark=mark+1;
+        
+        // localStorage.setItem("mark",mark);
+    
+    }
+    else
+    {
+        console.log("wrong answer");
+        
+    }
+    getJSON();
+    
 }
 
 
-function findResult()
-{
-}
+
+    //     console.log(mark);
+    // 
+

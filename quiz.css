@@ -70,3 +70,7 @@
     height: 36vh;
     display:flex;
  }
+ h1
+ {
+    display:inline;
+ }
