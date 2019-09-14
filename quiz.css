@@ -85,7 +85,9 @@
      height: 28.49px;
      left: 50.27px;
      color: white;
-
+    justify-content: center;
+    align-content: center;
+    display: flex;
 background: #6477C6;
 border: 1px solid #3E8BD5;
 box-sizing: border-box;

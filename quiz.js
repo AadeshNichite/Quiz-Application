@@ -10,8 +10,9 @@ $(function(){
 //  }
   
   function getJSON(){
-     
-
+     let count=0;
+     if(count<10)
+     {
     $.getJSON("ques-db.json",function(json){
     
    const keys = Object.values(json);
@@ -33,7 +34,8 @@ $(function(){
     $("#value4").text(value["options"][3]);
 
    });
-
+}
+count++;
 }
 function process()
 {
