@@ -3,11 +3,11 @@ $(function(){
   })
 
   let mark=0;  
- function findResult(){
-    //let mark= JSON.parse(localStorage.getItem("mark"));
-    $("#result").text(mark);
-    console.log(mark);
- }
+//  function findResult(){
+//     //let mark= JSON.parse(localStorage.getItem("mark"));
+//     $("#result").text(mark);
+//     console.log(mark);
+//  }
   
   function getJSON(){
      
@@ -15,7 +15,7 @@ $(function(){
     $.getJSON("ques-db.json",function(json){
     
    const keys = Object.values(json);
-    let randIndex = Math.floor(Math.round(Math.random()*(10)));
+    let randIndex = Math.floor(Math.round(Math.random()*7));
 
     let value = keys[randIndex];
        // console.log(q);
@@ -37,11 +37,11 @@ $(function(){
 }
 function process()
 {
-    var selectedValue=document.getElementById("value1").value;
+    let selectedValue=document.getElementById("value1").value;
     console.log(selectedValue);
     
-    var que = sessionStorage.getItem("que");
-    var ans = sessionStorage.getItem("ans");
+    let que = sessionStorage.getItem("que");
+    let ans = sessionStorage.getItem("ans");
 
     if(ans==selectedValue)
     {
