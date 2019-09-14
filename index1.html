@@ -37,13 +37,15 @@ Name:Quiz Application -->
                     </header>   
                     <p id="queNo">Question 1 of 10</p>
                     <p id="que">what is the financial capital of India?</p>
-                    <class id="answer-select">
-                            <option value="value1" id="value1">Mumbai</option>
-                            <option value="value2" id="value2">Delhi</option>
-                            <option value="value3" id="value3">Pune</option>
-                            <option value="value4" id="value4">Panaji</option>
+                    <div class="options" id="answer-select">
+                           <option id="value1" onclick="process();">Mumbai</option><br>
+                            <option id="value2" onclick="process1();">Delhi</option><br>
+                            <option id="value3" onclick="process2();">Pune</option><br>
+                            <option id="value4" onclick="process3();">Panaji</option>
                     </select>
-
+                </div>
+                <br>
+                    <button type="submit" onclick="findResult()">Submit</button>
             </div>
     </body>
     <script src="quiz.js"></script>
