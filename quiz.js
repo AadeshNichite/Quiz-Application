@@ -1,14 +1,37 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $(function(){
     getJSON();
   })
 
   let mark=0;  
-//  function findResult(){
-//     //let mark= JSON.parse(localStorage.getItem("mark"));
-//     $("#result").text(mark);
-//     console.log(mark);
-//  }
-  
   function getJSON(){
      let count=0;
      if(count<10)
@@ -50,8 +73,6 @@ function process()
         console.log("Right answer");
         
         mark++;
-        // localStorage.setItem("mark",mark);
-        // console.log1(mark);
         console.log(mark);
         
     }
@@ -75,7 +96,6 @@ function process1()
         console.log("Right answer")
         mark++;
        
-        // localStorage.setItem("mark",mark);
     
     }
     else
@@ -97,9 +117,6 @@ function process2()
     {
         console.log("Right answer");
         mark++;
-       
-    //    localStorage.setItem("mark",mark);
-    
     }
     else
     {
@@ -120,8 +137,6 @@ function process3()
     {
         console.log("Right answer");
         mark=mark+1;
-        
-        // localStorage.setItem("mark",mark);
     
     }
     else
@@ -135,6 +150,5 @@ function process3()
 
 
 
-    //     console.log(mark);
-    // 
+    
 
