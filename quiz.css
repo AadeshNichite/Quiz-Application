@@ -49,12 +49,7 @@
     font-size: 30;
     color:var(--color-3);
  }
- .logo{
-    align-items: top;
-    justify-content: center;
-    height: 30vh;
-    display:flex;
- }
+ 
  .skill{
     align-items: center;
     justify-content: center;
@@ -131,3 +126,9 @@ border-radius: 10px;
    padding-right: 80%;
    
  }
+ z{
+    font-size: 5em;
+    color: white;
+ }
+
+    
