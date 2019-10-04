@@ -170,7 +170,7 @@ border-radius: 10px;
 
  }
  .Startbtn:hover {
-   background-color: var(--color-1) ;
+   background-color: var(--color-1);
  }
  .col-sm.r 
  {
@@ -220,30 +220,44 @@ p
    display: flex;
    justify-content: center;
    align-items: center;
+   margin-bottom: 35;
 
 }
 .btn
 {
-   /* width: 220px;
-   background-color: blue;
-   border-radius: 5px; 
-   color: var(--color-3);
-   margin: 3px; */
-   width: 250;
+     width: 250;
      height: 40;
      left: 50.27px;
-     color: white;
-    justify-content: center;
-    align-content: center;
-    display: flex;
-      background: #6477C6;
+     justify-content: center;
+      align-content: center;
+      display: flex;
       border: 1px solid #3E8BD5;
       box-sizing: border-box;
-      border-radius: 10px;
+      border-radius: 20px;
       margin: 10;
 }
+.btn:hover {
+   background-color: var(--color-1) ;
+   color: var(--color-3);
+   text-decoration: none;
+ }
 .option1
 {
+   justify-content: center;
+   align-items: center;
+   display: flex;
+}
+.InstructionDiv
+{
+   margin-bottom: 40;
+}
+#que
+{
+   font-size: 30;
+}
+#QuestionNo
+{
+   font-size: 20;
    justify-content: center;
    align-items: center;
    display: flex;
